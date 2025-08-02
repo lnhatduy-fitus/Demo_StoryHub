@@ -1,0 +1,122 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #eaeaea; */
+    background-image: repeating-linear-gradient(45deg,
+            #f9a825,
+            #f9a825 40px,
+            #333 40px,
+            #333 80px);
+}
+
+.main {
+  width: 500px;
+  min-height: 480px;
+  background-color: #fff8dc;
+  border-radius: 32px;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.bug_icon {
+  width: 80px;
+  height: 80px;
+  border: 5px dotted #ffc107;
+  color: #d63333;
+  background-color: #fff9e6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.bug_icon:hover {
+  color: #ff6b00;
+  transform: scale(1.15);
+}
+
+.icon {
+  font-size: 44px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #b02a37;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.reasonLabel {
+  font-size: 18px;
+  color: #6c757d;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.reason {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  background-color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.buttonGroup {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.refreshBtn {
+  background-color: #dc3545;
+}
+
+.refreshBtn:hover {
+  background-color: #bb2d3b;
+  transform: scale(1.05);
+}
+
+.homeBtn {
+  background-color: #198754;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeBtn:hover {
+  background-color: #157347;
+  transform: scale(1.05);
+}

@@ -1,0 +1,375 @@
+/* Harmonize buttons and effects with palette */
+.btnPrimary {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+.btnPrimary:hover, .btnPrimary:focus-visible {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  box-shadow: 0 6px 24px rgba(127,140,170,0.18);
+  transform: translateY(-2px) scale(1.03);
+  outline: 2px solid var(--soft);
+  outline-offset: 2px;
+}
+
+.btnOutline {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border var(--transition), box-shadow var(--transition);
+}
+.btnOutline:hover, .btnOutline:focus-visible {
+  background: var(--primary-light);
+  color: var(--dark);
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 16px rgba(127,140,170,0.13);
+  outline: 2px solid var(--soft);
+  outline-offset: 2px;
+}
+
+
+
+/* ==== Bố cục flex giữa sidebar và nội dung chính ==== */
+.container {
+  display: flex;
+  height: 100vh;  /* Chiều cao toàn màn hình */
+}
+
+/* ==== Thanh sidebar bên trái ==== */
+.sidebar {
+  background-color: var(--dark);  /* Nền tối */
+  color: white;                   /* Chữ trắng */
+  width: 220px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 0 8px rgba(51,52,70,0.07);
+}
+
+/* ==== Logo trong sidebar ==== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.logoImg {
+  width: 180px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;   /* Bo tròn góc ảnh */
+  overflow: hidden;
+}
+
+/* ==== Nút nộp chương bên sidebar ==== */
+.submitBtn {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  outline: none;
+  box-shadow: var(--shadow);
+}
+
+.submitBtn:hover {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(127,140,170,0.13);
+}
+
+.submitBtn:focus-visible {
+  outline: 2px solid var(--soft);
+  outline-offset: 2px;
+}
+
+
+.mainContent {
+  flex-grow: 1;
+  padding: 30px 40px;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  color: var(--dark);
+}
+
+/* Thông tin người dùng ở topbar */
+.user-info {
+  text-align: right;
+  font-size: 14px;
+  color: var(--mid); /* màu trung gian nhẹ nhàng */
+}
+
+.user-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark);
+  background: linear-gradient(90deg, #eaf0fa 60%, #dbe6f6 100%);
+  border-radius: 8px;
+  padding: 6px 18px;
+  box-shadow: 0 1px 4px rgba(127,140,170,0.10);
+}
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--mid);
+}
+.user-name {
+  font-weight: bold;
+  color: var(--mid);
+  text-decoration: none;
+}
+.user-id {
+  color: #888;
+  font-size: 15px;
+  margin-left: 4px;
+}
+
+.formWrapper {
+  background: var(--soft);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.checkboxGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.checkboxGroup label {
+  font-weight: normal;
+}
+
+
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: var(--dark);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(127,140,170,0.13);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--soft);
+  outline-offset: 2px;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
+  background: var(--soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #999;
+  font-size: 14px;
+}
+
+.circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  border: 2px solid var(--mid);
+  background: #fff;
+  color: var(--dark);
+  transition: background var(--transition), color var(--transition), border var(--transition);
+}
+
+.stepActiveCircle {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: var(--primary) !important;
+}
+
+.stepActiveLabel {
+  color: #f45c5c !important;
+}
+
+.separator {
+  width: 30px;
+  height: 2px;
+  background-color: #ddd;
+  margin: 0 5px;
+}
+  
+/* Hộp thông báo kết quả */
+.resultBox {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--soft) 100%);
+  border-radius: var(--radius) 32px var(--radius) 32px;
+  box-shadow: 0 6px 32px 0 rgba(127,140,170,0.10);
+  border: 2.5px solid var(--primary);
+  padding: 48px 36px;
+  text-align: center;
+  margin: 48px auto;
+  max-width: 520px;
+  position: relative;
+  overflow: hidden;
+  animation: pop-in 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.resultBox:focus-within {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+.iconSuccess {
+  font-size: 54px;
+  color: var(--primary);
+  margin-bottom: 18px;
+  text-shadow: 0 2px 8px rgba(127,140,170,0.10);
+  animation: bounce 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.btnPrimary, .btnOutline {
+  min-width: 160px;
+}
+.btnGroup {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+/* Tabs and active states (if any) */
+.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+.breadcrumbLink {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+.breadcrumbLink:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+.userLink {
+  color: var(--mid);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+.userLink:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Apply box-sizing: border-box only to relevant selectors, not globally */
+.container, .sidebar, .mainContent, .storyCard, .tabs, .stats, .contract, .topbar, .userInfo, .submitBtn, .createBtn, .contractBtn, .breadcrumbLink, .userLink {
+  box-sizing: border-box;
+}
+
+/* ==== Menu điều hướng trong sidebar ==== */
+.navList {
+  list-style: none;
+  padding: 0;
+}
+
+.navItem {
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navItem:hover {
+  background: #b8c6e0;
+  color: #333446;
+  border-radius: 6px;
+}
+
+.formLabel {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.input,
+.textarea,
+.select,
+.fileInput {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+
+
+
+

@@ -1,0 +1,338 @@
+.readingContainer {
+
+  padding: 40px;
+  background-color: #dddddd;
+  /* border: 4px solid #333; */
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ✅ Rất quan trọng để không ép ảnh giãn ngang */
+  gap: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.readingImage {
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  page-break-after: always;
+}
+
+
+
+.readingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  background-color: #EAEFEF; /* Màu nền của trang */
+
+}
+.main{
+  min-height:200vh;
+}
+.header-container {
+  background-color: #333446; 
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+.header {
+  background-color: #333446;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1280px; 
+  height: 70px;
+  box-sizing: border-box;
+  color: #B8CFCE;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo */
+
+.logoLink img {
+  width: 100px;
+  height: auto;
+  margin-left: 20px;
+  margin-right: -50px;
+}
+
+/* Thanh tìm kiếm */
+a#LogIn, a#SignUp {
+    color: #B8CFCE;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 0; /* Bỏ khoảng cách bên trái */
+    text-decoration: underline;;
+}
+
+
+
+span.divider {
+    color: #B8CFCE;
+    margin: 0 5px; /* Khoảng cách nhỏ giữa dấu / và link */
+    user-select: none; /* Không cho chọn dấu / khi bôi */
+}
+.button1{
+  display: flex;
+  justify-content: center;
+}
+.button2{
+  display: flex;
+  justify-content: center;
+  margin-bottom:0px;
+}
+
+
+button.previous,  button.previous2 {
+    background-color: #333446;
+    color: #B8CFCE;
+    border: none;
+    width: 130px;
+    height: 41px;
+    border-radius: 12px;
+    font-size: 20px;
+    margin: 0px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'inter', sans-serif;
+
+}
+
+button.next, button.next2 {
+    background-color: #B8CFCE; 
+    color: #333446;
+    border: none;
+    width: 130px;
+    height: 41px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: 'inter', sans-serif;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    align-self: center;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333446;
+  color: #B8CFCE;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  z-index: 100;
+}
+
+.logo-footer {
+    margin-right: 0px;
+    width: 100px;
+    height: auto;
+}
+
+button.next:hover, button.next2:hover {
+  background-color: #8FA9B7; /* Màu nền khi hover, bạn có thể chỉnh lại */
+  color: #1a1a1a; /* Màu chữ khi hover, bạn có thể chỉnh lại */
+  cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+}
+
+button.previous:hover, button.previous2:hover {
+    background-color: #555a6e; /* Màu nền khi hover, bạn chỉnh theo ý thích */
+    color: #e0e6eb; /* Màu chữ khi hover */
+    cursor: pointer;
+}
+
+span.divider {
+    color: #B8CFCE;
+    margin: 0 5px; /* Khoảng cách nhỏ giữa dấu / và link */
+    user-select: none; /* Không cho chọn dấu / khi bôi */
+}
+.button1{
+  display: flex;
+  justify-content: center;
+}
+.button2{
+  display: flex;
+  justify-content: center;
+  margin-bottom:0px;
+}
+
+
+button.previous,  button.previous2 {
+    background-color: #333446;
+    color: #B8CFCE;
+    border: none;
+    width: 130px;
+    height: 41px;
+    border-radius: 12px;
+    font-size: 20px;
+    margin: 0px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'inter', sans-serif;
+
+}
+
+button.next, button.next2 {
+    background-color: #B8CFCE; 
+    color: #333446;
+    border: none;
+    width: 130px;
+    height: 41px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: 'inter', sans-serif;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    align-self: center;
+}
+.footerInformation  {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333446;
+  color: #B8CFCE;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  z-index: 100;
+}
+
+.logo-footer {
+    margin-right: 0px;
+    width: 100px;
+    height: auto;
+}
+
+button.next:hover, button.next2:hover {
+  background-color: #8FA9B7; /* Màu nền khi hover, bạn có thể chỉnh lại */
+  color: #1a1a1a; /* Màu chữ khi hover, bạn có thể chỉnh lại */
+  cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+}
+
+button.previous:hover, button.previous2:hover {
+    background-color: #555a6e; /* Màu nền khi hover, bạn chỉnh theo ý thích */
+    color: #e0e6eb; /* Màu chữ khi hover */
+    cursor: pointer;
+}
+
+.footer {
+  min-height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  color: #B8CFCE;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  z-index: 100;
+  gap: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chapterList {
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  height: 100%;           
+}
+
+.chapterForm {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.homeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.homeButton i {
+  font-size: 25px; /* ✅ tăng kích thước icon ở đây */
+  color: #333;     /* hoặc màu tùy chọn */
+  transition: transform 0.2s ease;
+}
+
+.homeButton i:hover {
+  transform: scale(1.2);
+  color: #0070f3; /* màu khi hover */
+}
+
+.favorite {
+  width: 119px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EAEFEF;
+  color: #333;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  gap: 6px;
+}
+.favorite:hover {
+  background-color: #D3D3D3; 
+  color: #ff0000;
+}
+
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton-box {
+  width: 100%;
+  height: 1200px;
+  background: linear-gradient(
+    to right,
+    #dddddd 0%,
+    #eaeaea 20%,
+    #dddddd 40%,
+    #dddddd 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 1.6s infinite linear;
+  border-radius: 12px;
+  page-break-after: always;
+}

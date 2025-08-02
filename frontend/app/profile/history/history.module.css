@@ -1,0 +1,274 @@
+.container {
+	display: flex;
+	height: 100vh;
+	align-items: stretch;
+	overflow: hidden;
+	background-color: #EAEFEF;
+	color: white;
+	font-family: 'Tahoma', Arial, sans-serif;
+  }
+  
+  .sidebar {
+	width: 16%;
+	height: 100%;
+	background-color: #333446;
+	padding: 20px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .logo {
+	font-size: 20px;
+	font-weight: bold;
+	background: #cc2a92;
+	color: white;
+	padding: 10px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+  }
+
+  .nav {
+	width: 100%;
+  }
+
+  .nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .nav li {
+	display: flex;
+	flex-direction: row;    
+	align-items: center;   
+	margin: 85px 16px;        
+	font-size: 18px;
+	color: #EAEFEF;
+  }
+
+  .nav li a {
+	transition: text-shadow 0.3s, transform 0.3s;
+  }
+
+  .nav li a:hover {
+	color: #EAEFEF !important;
+	font-weight: bold;
+	text-decoration: underline;
+	transition: color 0.5s font-weight 10s !important;
+	text-shadow: 0 0 1px white, 0 0 1px white !important;
+	transform: scale(1.05);
+  }
+
+  .main {
+    flex: 1;
+    padding: 40px;
+    background-color: #EAEFEF;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+
+  }
+  
+  .profileInfo {
+	width: 50%;
+	max-width: 1200px;
+	margin: auto;
+  }
+  
+  .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+	color: #333446;
+  }
+  
+  .avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-right: 10px;
+  }
+  
+  .user {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	color: #333446;
+	margin-right: 50px;
+  }
+  
+  .form label {
+	display: block;
+	margin-bottom: 4px;
+  }
+  
+  .form input {
+	width: 100%;
+	padding: 10px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+	font-size: 20px;;
+  }
+  
+  .row {
+	display: flex;
+	gap: 20px;
+	color: #333446;
+  }
+  
+  .labelBirth {
+	color: #333446;
+  }
+  
+  .labelEmail {
+	color: #333446;
+  }
+  
+  .labelPassword {
+	color: #333446;
+  }
+
+  .lastNameInput {
+	width: 80% !important;
+	border: 2px solid #333446;
+  }
+  
+  .firstNameInput {
+	width: 81% !important;
+	border: 2px solid #333446;
+  }
+
+  .birthInput {
+	width: 91% !important;
+	border: 2px solid #333446;
+  }
+
+  .emailInput {
+	width: 91% !important;
+	border: 2px solid #333446;
+  }
+
+  .passwordInput {
+	width: 91% !important;
+	border: 2px solid #333446;
+  }
+
+  .row > div {
+	flex: 1;
+  }
+  
+  .actions {
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+  }
+
+  .historyItem {
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+ }
+
+  .readingTitle {
+	color: #333446;
+	margin-bottom: 30px;
+  }
+  
+  .readingList {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+  }
+  
+  .readingItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #f4f4f4;
+	padding: 16px;
+	border-radius: 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	color: #333;
+  }
+  
+  .readingLeft {
+	display: flex;
+	align-items: center;
+  }
+  
+  .readingCover {
+	width: 100px;
+	height: 140px;
+	object-fit: cover;
+	border-radius: 8px;
+	margin-right: 20px;
+  }
+  
+  .readingName {
+	margin: 0 0 10px 0;
+  }
+  
+  .readingMeta {
+	margin: 0;
+  }
+  
+  .readingActions {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+  }
+  
+  .readingContinue {
+	background-color: #7f8caa;
+	color: #fff;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: bold;
+  }
+  
+  .readingDelete {
+	background-color: #bdc3c7;
+	color: #000;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: bold;
+  }
+  
+  .readingEmpty {
+	text-align: center;
+	color: #666;
+  }
+
+  .readingContinue:active {
+  transform: scale(1.08);
+  transition: transform 0.1s;
+}
+
+.readingDelete:active {
+  transform: scale(1.08);
+  transition: transform 0.1s;
+}
+
+.readingContinue:hover,
+.readingDelete:hover {
+  transform: scale(1.06);
+  transition: transform 0.1s;
+}
+
+.readingContinue:active,
+.readingDelete:active {
+  transform: scale(1.12);
+  transition: transform 0.1s;
+}
+

@@ -1,0 +1,464 @@
+/* Bố cục bên phải của sidebar: topbar + mainContent */
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  min-width: 0;
+  width: 100%;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background: #f7f9fc;
+  border-bottom: 1px solid #e5e7eb;
+  min-height: 60px;
+  margin-bottom: 0 !important; /* Đảm bảo không có margin dưới */
+}
+
+.mainContent {
+  flex: 1;
+  padding: 0 24px 24px 24px;
+  background-color: white;
+  min-width: 0;
+}
+/*comment.module.css */
+.commentSection {
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dropdown {
+  margin-bottom: 1.5rem;
+}
+
+.select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  color: #111827;
+  transition: border-color 0.2s ease;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.separator {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+.textarea {
+  width: 98%;
+  min-height: 130px;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  resize: vertical;
+  background-color: #fefefe;
+  color: #1f2937;
+  transition: border-color 0.2s ease;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.centerButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.submitButton {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+}
+
+
+.submitButton:active {
+  background-color: #0a1947;
+  transform: translateY(0);
+}
+
+.submitButton:hover {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(127,140,170,0.13);
+}
+
+.submitButton:focus-visible {
+  outline: 2px solid var(--soft);
+  outline-offset: 2px;
+}
+
+/* ==== Menu điều hướng trong sidebar ==== */
+.navList {
+  list-style: none;
+  padding: 0;
+}
+
+.navItem {
+  padding: 10px 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navItem:hover {
+  background: #b8c6e0;
+  color: #333446;
+  border-radius: 6px;
+}
+
+/* ==== Bố cục flex giữa sidebar và nội dung chính ==== */
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #7f8caa;
+  color: #333;
+  text-align: center;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-top: 1px solid #ccc;
+  z-index: 100;
+}
+
+.mainContent {
+  flex: 1;
+}
+/* ==== Thanh sidebar bên trái ==== */
+.sidebar {
+  background-color: var(--dark);  /* Nền tối */
+  color: white;                   /* Chữ trắng */
+  width: 220px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 0 8px rgba(51,52,70,0.07);
+}
+
+/* ==== Logo trong sidebar ==== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.logoImg {
+  width: 180px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;   /* Bo tròn góc ảnh */
+  overflow: hidden;
+}
+
+/* ==== Nút nộp chương bên sidebar ==== */
+.submitBtn {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  outline: none;
+  box-shadow: var(--shadow);
+}
+
+.submitBtn:hover {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(127,140,170,0.13);
+}
+
+.submitBtn:focus-visible {
+  outline: 2px solid var(--soft);
+  outline-offset: 2px;
+}
+
+
+/* === MAIN CONTENT === */
+
+/* Nội dung bên phải */
+.mainContent {
+  flex-grow: 1; /* chiếm toàn bộ phần còn lại */
+  padding: 20px;
+  background-color: white; /* nền trắng cho nội dung */
+}
+
+/* Thanh topbar chứa breadcrumb và info người dùng */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+/* Thông tin người dùng ở topbar */
+.user-info {
+  text-align: right;
+  font-size: 14px;
+  color: var(--mid); /* màu trung gian nhẹ nhàng */
+}
+
+.user-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark);
+  background: linear-gradient(90deg, #eaf0fa 60%, #dbe6f6 100%);
+  border-radius: 8px;
+  padding: 6px 18px;
+  box-shadow: 0 1px 4px rgba(127,140,170,0.10);
+}
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--mid);
+}
+.user-name {
+  font-weight: bold;
+  color: var(--mid);
+  text-decoration: none;
+}
+.user-id {
+  color: #888;
+  font-size: 15px;
+  margin-left: 4px;
+}
+
+
+/* === PHẦN THỐNG KÊ === */
+
+/* Container cho cụm "Độ hot", "Like", "Bình luận" */
+/* Phần "Độ hot - Like - Bình luận", căn giữa toàn trang */
+.stats {
+  display: flex;
+  justify-content: center; /* căn giữa toàn bộ cụm */
+  gap: 80px; /* khoảng cách giữa các ô */
+  margin: 30px 0;
+  text-align: center;
+}
+
+/* Số đếm (0, 1, ...) */
+.stats div p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0 0;
+}
+
+/* Mục "Thống kê >" hoặc "Bình luận >" */
+.stats div span {
+  color: #7F8CAA;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* === TABS (Bản thảo) === */
+
+/* Tabs chọn trạng thái truyện */
+.tabs {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid var(--light); /* gạch ngăn cách */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Tab đang chọn */
+.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Các liên kết trong breadcrumb và thông tin người dùng */
+.breadcrumbLink {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+
+.breadcrumbLink:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.userLink {
+  color: var(--mid);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+
+.userLink:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Remove global box-sizing, set it only for sidebar, main-content, and form elements */
+.sidebar, .mainContent, .form-wrapper, .storyCard, .contract, .tabs, .stats, .createBtn, .submitBtn, .contractBtn, .btn, .btn-outline, .btn-primary, .btn-small {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================================================== */
+/* === PHẦN THỐNG KÊ === */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.stats div p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0 0;
+}
+
+.stats div span {
+  color: #7F8CAA;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* === TABS (Bản thảo) === */
+.tabs {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid var(--light);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Mỗi thẻ truyện bản thảo */
+.storyCard {
+  background-color: var(--soft);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.reviewing {
+  color: #e67e22;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+/* Nút tạo truyện mới */
+.createBtn {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+.createBtn:hover {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(127,140,170,0.13);
+}
+
+.createBtn:focus-visible {
+  outline: 2px solid var(--soft);
+  outline-offset: 2px;
+}
+
+/* === PHẦN KÝ HỢP ĐỒNG === */
+.contract {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: var(--soft);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contractBtn {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+.contractBtn:hover {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(127,140,170,0.13);
+}
+
+.contractBtn:focus-visible {
+  outline: 2px solid var(--soft);
+  outline-offset: 2px;
+}

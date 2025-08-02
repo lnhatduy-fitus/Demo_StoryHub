@@ -1,0 +1,48 @@
+:root {
+  --dark: #333446;
+  --mid: #7F8CAA;
+  --soft: #B8CFCE;
+  --light: #EAEFEF;
+  --primary: var(--mid);
+  --primary-dark: #5c678a;
+  --primary-light: #b8c6e0;
+  --accent: var(--dark);
+  --radius: 10px;
+  --spacing: 20px;
+  --transition: 0.2s;
+  --shadow: 0 2px 8px rgba(51,52,70,0.07);
+}
+
+html {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  background-color: #EAEFEF;
+  color: #333446;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  80% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0% { transform: scale(0.7); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}

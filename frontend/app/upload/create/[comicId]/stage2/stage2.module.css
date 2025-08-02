@@ -1,0 +1,346 @@
+/* ==== Bố cục flex giữa sidebar và nội dung chính ==== */
+.container {
+  display: flex;
+  height: 100vh;  /* Chiều cao toàn màn hình */
+}
+
+/* ==== Thanh sidebar bên trái ==== */
+.sidebar {
+  background-color: var(--dark);  /* Nền tối */
+  color: white;                   /* Chữ trắng */
+  width: 220px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 0 8px rgba(51,52,70,0.07);
+}
+
+/* ==== Logo trong sidebar ==== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.logoImg {
+  width: 180px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ==== Nút nộp chương bên sidebar ==== */
+.submitBtn {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  outline: none;
+  box-shadow: var(--shadow);
+}
+
+.submitBtn:hover {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(127,140,170,0.13);
+}
+
+.submitBtn:focus-visible {
+  outline: 2px solid var(--soft);
+  outline-offset: 2px;
+}
+
+
+.mainContent {
+  flex-grow: 1;
+  padding: 30px 40px;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  color: var(--dark);
+}
+
+/* Thông tin người dùng ở topbar */
+.user-info {
+  text-align: right;
+  font-size: 14px;
+  color: var(--mid); /* màu trung gian nhẹ nhàng */
+}
+
+.user-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark);
+  background: linear-gradient(90deg, #eaf0fa 60%, #dbe6f6 100%);
+  border-radius: 8px;
+  padding: 6px 18px;
+  box-shadow: 0 1px 4px rgba(127,140,170,0.10);
+}
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--mid);
+}
+.user-name {
+  font-weight: bold;
+  color: var(--mid);
+  text-decoration: none;
+}
+.user-id {
+  color: #888;
+  font-size: 15px;
+  margin-left: 4px;
+}
+
+.formWrapper {
+  background: var(--soft);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
+  background: var(--soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #999;
+  font-size: 14px;
+}
+
+.circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--mid);
+  background: #fff;
+  color: var(--dark);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  transition: background var(--transition), color var(--transition), border var(--transition);
+}
+
+.stepActiveCircle {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: var(--primary) !important;
+}
+
+.stepActiveLabel {
+  color: #f45c5c !important;
+}
+
+.separator {
+  width: 30px;
+  height: 2px;
+  background-color: #ddd;
+  margin: 0 5px;
+}
+
+/* Tabs and active states (if any) */
+.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+.breadcrumbLink {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+.breadcrumbLink:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+.userLink {
+  color: var(--mid);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+.userLink:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+
+/* Center the Create Chapter button and enhance its appearance */
+/* ==== Nút chung cho các hành động (submit, preview,...) ==== */
+.btn {
+  margin-top: 20px;
+  padding: 14px 36px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(127,140,170,0.10);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  display: block;
+  margin: 32px auto 0 auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:hover, .btn:focus-visible {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  box-shadow: 0 6px 24px rgba(127,140,170,0.18);
+  transform: translateY(-2px) scale(1.03);
+  outline: 2px solid #7F8CAA;
+  outline-offset: 2px;
+}
+
+/* Add a disabled style for the button */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  background: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  outline: none;
+}
+
+/* ==== Menu điều hướng trong sidebar ==== */
+.navList {
+  list-style: none;
+  padding: 0;
+}
+
+.navItem {
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navItem:hover {
+  background: #b8c6e0;
+  color: #333446;
+  border-radius: 6px;
+}
+
+
+/* Align and style input boxes for chapter name, order, and file upload */
+.formLabel {
+  display: block;
+  margin-top: 18px;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 15px;
+  background: #EAEFEF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  display: block;
+  box-sizing: border-box;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #7F8CAA;
+  box-shadow: 0 0 0 2px #b8c6e0;
+  outline: none;
+}
+
+.fileInput {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 8px;
+  border-radius: 10px;
+  background: #B8CFCE;
+  border: 1.5px dashed #b8c6e0;
+  color: #333446;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.fileInput:focus {
+  border-color: #7F8CAA;
+  box-shadow: 0 0 0 2px #b8c6e0;
+  outline: none;
+}
+.fileInput::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.fileInput::before {
+  content: 'Chọn ảnh chương';
+  display: inline-block;
+  background: linear-gradient(90deg, #7F8CAA, #5c678a);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.fileInput:hover::before {
+  background: linear-gradient(90deg, #5c678a, #7F8CAA);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.nextBtn {
+  padding: 10px 20px;
+  background-color: #8888ff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nextBtn:hover {
+  background-color: #6666dd;
+}
