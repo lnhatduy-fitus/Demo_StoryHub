@@ -34,8 +34,9 @@ const loginAuth = async (req, res) => {
 
       res.cookie('token', token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'none',
+        // secure: process.env.NODE_ENV === 'production',
+        secure: false,
+        sameSite: 'lax',
         expires:payload.expires,
       });
 
