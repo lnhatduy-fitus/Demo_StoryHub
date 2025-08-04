@@ -20,13 +20,12 @@ const loginAuth = async (req, res) => {
       const payload = {
         id: user.userid,
         name: user.name,
-        password: user.passwordhash,
         role: user.role,
-        expires: new Date(Date.now() + 60 * 60 * 1000),
+        expires: new Date(Date.now() + 3 * 60 * 60 * 1000),
       };
 
 
-      if (!(await verifyPassword(payload.password, password))){
+      if (!(await verifyPassword(user.passwordhash, password))){
         return res.status(401).json({message: "Incorrect password"});
       }
 
@@ -35,8 +34,8 @@ const loginAuth = async (req, res) => {
       res.cookie('token', token, {
         httpOnly: true,
         // secure: process.env.NODE_ENV === 'production',
-        secure: false,
-        sameSite: 'lax',
+        secure: true,
+        sameSite: 'None',
         expires:payload.expires,
       });
 

@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import express from 'express';
+import crypto from 'crypto';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { refreshSession } from './middleware/session.js';
@@ -18,8 +19,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
+console.log('🌐 CORS Origin:', process.env.NEXT_PUBLIC_FRONTEND_URL);
 app.use(cors({
-  origin: process.env.NEXT_PUBLIC_FRONTEND_URL,
+  origin: [process.env.NEXT_PUBLIC_FRONTEND_URL, 'http://116.118.60.232:1307'],
   credentials: true
 }));
 app.use(cookieParser());
@@ -40,6 +42,6 @@ app.get('/', (req, res) => {
   res.send('Backend is running');
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running at http://localhost:${PORT}`);
 });

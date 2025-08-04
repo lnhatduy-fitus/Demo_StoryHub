@@ -49,6 +49,9 @@ const AuthButtons = ({ isLoggedIn }) => {
           <button className={styles.btn} onClick={handleRegister}>
             Register
           </button>
+	 <button className={styles.btn} onClick={handleLogout}>
+            Log out
+          </button>
         </div>
       )}
     </>

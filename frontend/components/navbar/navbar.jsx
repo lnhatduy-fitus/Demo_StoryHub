@@ -27,6 +27,9 @@ const Navbar = async () => {
 
     const cookie = await cookies();
     const logined = cookie.has('token');
+
+console.log('Has token:', logined); // Sẽ log ở server terminal
+    console.log('All cookies:', cookie.getAll())
     
     return (
 
